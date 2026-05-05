@@ -294,7 +294,8 @@ export default function Home() {
     return (
       <div style={page}>
         <div style={{ ...card, padding: '48px 40px', textAlign: 'center' }}>
-          <p style={logo}>☕ Basecamp Coffee</p>
+          <div style={{ fontSize: '72px', marginBottom: '12px', lineHeight: 1 }}>☕</div>
+          <p style={logo}>Basecamp Coffee</p>
           <h1 style={{ fontFamily: 'var(--font-lora), serif', fontSize: '32px', fontWeight: 600, color: '#3d2010', lineHeight: 1.3, marginBottom: '16px' }}>
             What&apos;s Your Coffee Personality?
           </h1>

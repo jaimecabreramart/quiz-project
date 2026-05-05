@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style 4 – Warm & Cozy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: linear-gradient(160deg, #f5ede0, #ead5c0);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .badge {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #6b3f2a;
+      color: #f5ede0;
+      font-weight: 500;
+      font-size: 12px;
+      padding: 6px 16px;
+      border-radius: 99px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .card {
+      background: #fffaf5;
+      border-radius: 20px;
+      padding: 44px 40px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 8px 40px rgba(107,63,42,0.12);
+    }
+    .logo {
+      font-family: 'Lora', serif;
+      font-size: 13px;
+      color: #b07050;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .progress {
+      height: 4px;
+      background: #f0e0d0;
+      border-radius: 4px;
+      margin-bottom: 36px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 60%;
+      background: linear-gradient(90deg, #c87941, #e8a87c);
+      border-radius: 4px;
+    }
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #3d2010;
+      margin-bottom: 8px;
+      line-height: 1.45;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #a07060;
+      margin-bottom: 28px;
+    }
+    .options { display: flex; flex-direction: column; gap: 10px; }
+    .option {
+      border: 1.5px solid #e8d5c0;
+      border-radius: 12px;
+      padding: 14px 18px;
+      cursor: pointer;
+      font-size: 15px;
+      color: #5a3520;
+      transition: all 0.2s;
+      background: white;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .option:hover { border-color: #c87941; background: #fffaf5; }
+    .option.selected { border-color: #c87941; background: #fff5ec; }
+    .option-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1.5px solid #d4b090;
+      flex-shrink: 0;
+    }
+    .option.selected .option-dot {
+      border-color: #c87941;
+      background: #c87941;
+    }
+    .btn {
+      margin-top: 32px;
+      width: 100%;
+      background: linear-gradient(135deg, #c87941, #a05520);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 15px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="badge">Style 4 — Warm & Cozy</div>
+  <div class="card">
+    <div class="logo">☕ Basecamp Coffee</div>
+    <div class="progress"><div class="progress-fill"></div></div>
+    <h2>Your ideal weekend getaway is...</h2>
+    <p class="subtitle">Choose the one that feels most like home</p>
+    <div class="options">
+      <div class="option selected"><div class="option-dot"></div> An extreme hiking trip somewhere wild</div>
+      <div class="option"><div class="option-dot"></div> Lazy beach days with good snacks</div>
+      <div class="option"><div class="option-dot"></div> A cozy city with great coffee shops</div>
+      <div class="option"><div class="option-dot"></div> A wellness retreat — yoga, clean eats</div>
+    </div>
+    <button class="btn">Next question →</button>
+  </div>
+</body>
+</html>

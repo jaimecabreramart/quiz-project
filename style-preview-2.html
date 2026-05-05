@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style 2 – Minimal & Clean</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f7f7f5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .badge {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1a1a1a;
+      color: white;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 6px 16px;
+      border-radius: 99px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .card {
+      background: white;
+      border-radius: 4px;
+      padding: 52px 48px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .step {
+      font-size: 11px;
+      font-weight: 500;
+      color: #aaa;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 400;
+      color: #111;
+      margin-bottom: 40px;
+      line-height: 1.4;
+    }
+    .options { display: flex; flex-direction: column; gap: 0; }
+    .option {
+      border-top: 1px solid #eee;
+      padding: 18px 0;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 400;
+      color: #444;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: color 0.15s;
+    }
+    .option:last-child { border-bottom: 1px solid #eee; }
+    .option:hover { color: #111; }
+    .option.selected { color: #111; font-weight: 500; }
+    .option .arrow { color: #ccc; font-size: 18px; }
+    .option.selected .arrow { color: #111; }
+    .btn {
+      margin-top: 40px;
+      background: #111;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 14px 32px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.5px;
+    }
+    .progress-bar {
+      height: 2px;
+      background: #eee;
+      margin-bottom: 40px;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 60%;
+      background: #111;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="badge">Style 2 — Minimal & Clean</div>
+  <div class="card">
+    <div class="step">Question 3 of 5</div>
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+    <h2>Your ideal weekend getaway is...</h2>
+    <div class="options">
+      <div class="option selected">An extreme hiking trip somewhere wild <span class="arrow">→</span></div>
+      <div class="option">Lazy beach days with good snacks <span class="arrow">→</span></div>
+      <div class="option">A cozy city with great coffee shops <span class="arrow">→</span></div>
+      <div class="option">A wellness retreat — yoga, clean eats <span class="arrow">→</span></div>
+    </div>
+    <button class="btn">Continue</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style 1 – Playful & Colorful</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f9c74f, #f3722c, #f94144);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .badge {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      color: #f3722c;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 6px 16px;
+      border-radius: 99px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .card {
+      background: white;
+      border-radius: 28px;
+      padding: 40px 36px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    }
+    .progress {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 32px;
+    }
+    .progress-dot {
+      height: 8px;
+      border-radius: 99px;
+      flex: 1;
+      background: #ffe5d0;
+    }
+    .progress-dot.active { background: #f3722c; }
+    h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #1a1a2e;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .emoji { font-size: 36px; margin-bottom: 12px; display: block; }
+    .subtitle {
+      color: #888;
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+    .options { display: flex; flex-direction: column; gap: 12px; }
+    .option {
+      border: 2.5px solid #ffe5d0;
+      border-radius: 16px;
+      padding: 14px 18px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      color: #333;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .option:hover { border-color: #f3722c; background: #fff8f4; }
+    .option.selected { border-color: #f3722c; background: #fff3ee; color: #f3722c; }
+    .option-icon { font-size: 20px; }
+    .btn {
+      margin-top: 28px;
+      width: 100%;
+      background: linear-gradient(135deg, #f3722c, #f94144);
+      color: white;
+      border: none;
+      border-radius: 16px;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="badge">Style 1 — Playful & Colorful</div>
+  <div class="card">
+    <div class="progress">
+      <div class="progress-dot active"></div>
+      <div class="progress-dot active"></div>
+      <div class="progress-dot active"></div>
+      <div class="progress-dot"></div>
+      <div class="progress-dot"></div>
+    </div>
+    <span class="emoji">✈️</span>
+    <h2>Your ideal weekend getaway is...</h2>
+    <p class="subtitle">Pick the one that feels most like you</p>
+    <div class="options">
+      <div class="option selected"><span class="option-icon">🏔️</span> An extreme hiking trip somewhere wild</div>
+      <div class="option"><span class="option-icon">🏖️</span> Lazy beach days with good snacks</div>
+      <div class="option"><span class="option-icon">🎨</span> A cozy city with great coffee shops</div>
+      <div class="option"><span class="option-icon">🌿</span> A wellness retreat — yoga, clean eats</div>
+    </div>
+    <button class="btn">Next →</button>
+  </div>
+</body>
+</html>

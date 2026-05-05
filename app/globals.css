@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5ede0;
+  --foreground: #3d2010;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-lora);
+}
+
+body {
+  background: linear-gradient(160deg, #f5ede0, #ead5c0);
+  min-height: 100vh;
+  color: var(--foreground);
+  font-family: var(--font-dm-sans), sans-serif;
+}
+
+/* Bold Adventurer: explosive burst from center */
+@keyframes burst {
+  0%   { transform: translate(-50%, -50%) scale(1.5); opacity: 1; }
+  100% { transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(0.2); opacity: 0; }
+}
+
+/* Sweet Enthusiast: falling from top */
+@keyframes fall {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+  85%  { opacity: 1; }
+  100% { transform: translateY(105vh) rotate(400deg); opacity: 0; }
+}
+
+/* Night Owl: rising from bottom */
+@keyframes riseUp {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(-110vh) rotate(-200deg); opacity: 0; }
+}
+
+/* Artisan Snob: slow wispy steam rise */
+@keyframes steam {
+  0%   { transform: translateY(0) translateX(0) scale(1); opacity: 0.9; }
+  50%  { transform: translateY(-120px) translateX(12px) scale(1.6); opacity: 0.4; }
+  100% { transform: translateY(-240px) translateX(-8px) scale(2.2); opacity: 0; }
+}
